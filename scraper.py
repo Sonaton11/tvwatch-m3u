@@ -10,9 +10,81 @@ session.headers.update({
     "User-Agent": "Mozilla/5.0"
 })
 
+# Indian Bangla priority order
+PRIORITY = [
+    "Star Jalsha",
+    "Star Jalsha HD",
+    "Zee Bangla",
+    "Zee Bangla HD",
+    "Colors Bangla",
+    "Colors Bangla HD",
+    "Sun Bangla",
+    "Sun Bangla HD",
+    "Sony Aath",
+    "Aakash Aath",
+    "Ruposhi Bangla",
+    "Enterr10 Bangla",
+    "DD Bangla",
+    "DD Tripura",
+    "R Plus",
+    "R Plus Gold",
+    "Rongeen TV",
+    "Zee Bangla Sonar",
+    "Jalsha Movies",
+    "Jalsha Movies HD",
+    "Colors Bangla Cinema",
+    "Zee Bangla Cinema",
+    "Khushboo Bangla",
+    "ABP Ananda",
+    "News18 Bangla",
+    "Zee 24 Ghanta",
+    "TV9 Bangla",
+    "Republic Bangla",
+    "Kolkata TV",
+    "Calcutta News",
+    "News Time",
+    "RCTV Sangbad",
+    "High News",
+    "Sangeet Bangla",
+    "Dhoom Music",
+    "ON TV",
+    "Tara News",
+    "Tara Newz",
+    "Bangla Time",
+    "Mahuaa Khobor",
+    "Artage News",
+    "ETV News Bangla",
+    "Woman TV",
+    "Bangla Talkies",
+    "Sananda TV",
+    "Mahuaa Bangla",
+    "Aamar Cinema",
+    "Music F Fatafati",
+    "Channel 8",
+    "24 Ghanta",
+    "Zee Bangla Sonar Movies"
+]
+
+def clean(x):
+    x = html.unescape(x)
+    x = x.replace(r'\/', '/')
+    x = x.replace(r'\u0026', '&')
+    x = x.replace(r'\"', '"')
+    return x.strip()
+
+def normalize(name):
+    return re.sub(
+        r'[^a-z0-9]+',
+        '',
+        name.lower()
+    )
+
 print("Getting country list...")
 
-home = session.get(BASE + "/", timeout=30).text
+home = session.get(
+    BASE + "/",
+    timeout=30
+).text
 
 countries = sorted(set(
     x.lower()
@@ -23,31 +95,19 @@ countries = sorted(set(
     )
 ))
 
-# Bangladesh → India → Other countries
-countries = (
-    [x for x in countries if x == "bd"] +
-    [x for x in countries if x == "in"] +
-    [x for x in countries if x not in ("bd", "in")]
-)
+print("Countries found:", len(countries))
 
-print("Countries:", len(countries))
-
-seen = set()
-items = []
-
-def clean(x):
-    x = html.unescape(x)
-    x = x.replace(r'\/', '/')
-    x = x.replace(r'\u0026', '&')
-    x = x.replace(r'\"', '"')
-    return x.strip()
+all_channels = []
 
 for number, country in enumerate(countries, 1):
 
     try:
         url = f"{BASE}/country/{country}"
 
-        response = session.get(url, timeout=30)
+        response = session.get(
+            url,
+            timeout=30
+        )
 
         if response.status_code != 200:
             print(
@@ -75,7 +135,7 @@ for number, country in enumerate(countries, 1):
             if not name_match:
                 continue
 
-            channel_name = clean(
+            name = clean(
                 name_match.group(1)
             )
 
@@ -112,20 +172,11 @@ for number, country in enumerate(countries, 1):
                 ):
                     continue
 
-                if stream_url in seen:
-                    continue
-
-                seen.add(stream_url)
-
-                safe_name = channel_name.replace('"', "'")
-
-                items.append(
-                    f'#EXTINF:-1 '
-                    f'tvg-country="{country.upper()}" '
-                    f'tvg-name="{safe_name}",'
-                    f'{safe_name}\n'
-                    f'{stream_url}'
-                )
+                all_channels.append({
+                    "country": country.upper(),
+                    "name": name,
+                    "url": stream_url
+                })
 
                 count += 1
 
@@ -134,12 +185,117 @@ for number, country in enumerate(countries, 1):
             f"{country.upper()} : {count}"
         )
 
-    except Exception as error:
+    except Exception as e:
 
         print(
             f"[{number}/{len(countries)}] "
-            f"{country.upper()} ERROR: {error}"
+            f"{country.upper()} ERROR"
         )
+
+# Remove duplicate URLs
+seen = set()
+unique = []
+
+for item in all_channels:
+
+    if item["url"] in seen:
+        continue
+
+    seen.add(item["url"])
+    unique.append(item)
+
+all_channels = unique
+
+# -------------------------------
+# Bangladesh FIRST
+# -------------------------------
+
+bd = [
+    x for x in all_channels
+    if x["country"] == "BD"
+]
+
+# -------------------------------
+# Indian Bangla PRIORITY
+# -------------------------------
+
+india = [
+    x for x in all_channels
+    if x["country"] == "IN"
+]
+
+priority_map = {
+    normalize(name): position
+    for position, name in enumerate(
+        PRIORITY
+    )
+}
+
+def priority_index(item):
+
+    name = normalize(item["name"])
+
+    # Exact match first
+    if name in priority_map:
+        return priority_map[name]
+
+    # Partial match
+    for p_name, position in priority_map.items():
+
+        if p_name in name or name in p_name:
+            return position
+
+    return 999999
+
+india_priority = sorted(
+    india,
+    key=priority_index
+)
+
+# -------------------------------
+# Other India channels
+# -------------------------------
+
+priority_urls = set(
+    x["url"] for x in india_priority
+)
+
+india_other = [
+    x for x in india
+    if x["url"] not in priority_urls
+]
+
+# -------------------------------
+# Other countries
+# -------------------------------
+
+others = [
+    x for x in all_channels
+    if x["country"] not in ("BD", "IN")
+]
+
+# Final order
+final_channels = (
+    bd +
+    india_priority +
+    india_other +
+    others
+)
+
+print()
+print("==============================")
+print("FINAL ORDER")
+print("Bangladesh :", len(bd))
+print("India      :", len(india))
+print("Priority   :", len(india_priority))
+print("Other India:", len(india_other))
+print("Other      :", len(others))
+print("TOTAL      :", len(final_channels))
+print("==============================")
+
+# -------------------------------
+# Write M3U
+# -------------------------------
 
 with open(
     OUT,
@@ -148,13 +304,25 @@ with open(
 ) as file:
 
     file.write("#EXTM3U\n")
-    file.write("\n".join(items))
-    file.write("\n")
+
+    for item in final_channels:
+
+        name = item["name"].replace(
+            '"',
+            "'"
+        )
+
+        file.write(
+            f'#EXTINF:-1 '
+            f'tvg-country="{item["country"]}" '
+            f'tvg-name="{name}",'
+            f'{name}\n'
+        )
+
+        file.write(
+            item["url"] + "\n"
+        )
 
 print()
-print("==============================")
 print("DONE")
-print("Countries :", len(countries))
-print("Streams   :", len(items))
-print("File      :", OUT)
-print("==============================")
+print("File:", OUT)
