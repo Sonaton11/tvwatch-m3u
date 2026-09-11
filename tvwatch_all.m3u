@@ -13657,6 +13657,8 @@ http://stream.mcquack.net/28/index.m3u8
 https://fs.uplink.kz/astana/mono.m3u8?token=onlinetv
 #EXTINF:-1 tvg-country="KZ" tvg-name="Atameken Business",Atameken Business
 https://fs.uplink.kz/atameken/mono.m3u8?token=onlinetv
+#EXTINF:-1 tvg-country="KZ" tvg-name="Atyray",Atyray
+https://stream.kaztrk.kz/regional/atyrautv/index.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Balapan",Balapan
 https://balapantv-stream.qazcdn.com/balapantv/balapantv/playlist.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Balapan",Balapan
@@ -13670,7 +13672,7 @@ https://stream.kaztrk.kz/regional/pavlodartv/index.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Jambyl",Jambyl
 https://stream.kaztrk.kz/regional/taraztv/index.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Jibek Joly",Jibek Joly
-https://stream.qazcdn.net/ex6r514/jjtv/p
+https://stream.qazcdn.net/ex6r514/jjtv/playlist.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Khabar",Khabar
 https://fs.uplink.kz/habar/mono.m3u8?token=onlinetv
 #EXTINF:-1 tvg-country="KZ" tvg-name="Kokshe",Kokshe
@@ -13713,8 +13715,6 @@ http://stream.mcquack.net/71/index.m3u8
 https://vs137.vcdn.biz/6aa0d03eb8d337c5a12c8275477af53a_megogo/live/hls/b/700_2490_4000/u_sid/0/o/229009131/rsid/15fbd560-a86a-45ca-8058-baf9f5f61c8e/u_uid/0/u_vod/0/u_device/cms_webandroid/u_devicekey/_site_mobile/lip/45.80.208.174*asn/u_srvc/84416/u_did/web_MjE7M10AtBKsWN3CHzhzNBgiG7LkULPx/type.live/chunklist-sid8840242905769027046-b4000000.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Qazaqstan",Qazaqstan
 https://fs.uplink.kz/qazaqstan/mono.m3u8?token=onlinetv
-#EXTINF:-1 tvg-country="KZ" tvg-name="Qazaqstan International",Qazaqstan International
-https://stream8.cinerama.uz/1431/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="QazSport",QazSport
 http://stream.mcquack.net/72/index.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="QazSport",QazSport
@@ -13726,7 +13726,7 @@ https://s.qonaevtv.kz/live/qonaev/playlist.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Qostanai",Qostanai
 https://stream.kaztrk.kz/regional/kostanaytv/index.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Qyzyljar",Qyzyljar
-https://stream.kazt
+https://stream.kaztrk.kz/regional/petropavltv/index.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Qyzylorda",Qyzylorda
 https://stream.kaztrk.kz/regional/kyzylordatv/index.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Rika TV",Rika TV
@@ -13745,8 +13745,6 @@ https://stream.qazcdn.net/ex6r514/silkwaycinema/index.m3u8
 https://live-tdk42kz.cdnvideo.ru/tdk42kz/tdk42kz_720.smil/playlist.m3u8
 #EXTINF:-1 tvg-country="KZ" tvg-name="Turan TV",Turan TV
 https://fs.uplink.kz/turan_tv/mono.m3u8?token=onlinetv
-#EXTINF:-1 tvg-country="KZ" tvg-name="Ulytau",Ulytau
-https://ulytau.tv/hls/master.m3u8
 #EXTINF:-1 tvg-country="LA" tvg-name="Brian TV",Brian TV
 https://livefta.malimarcdn.com/ftaedge00/briantv.sdp/playlist.m3u8
 #EXTINF:-1 tvg-country="LA" tvg-name="Dao Lane Xang TV",Dao Lane Xang TV
