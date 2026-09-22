@@ -67,15 +67,10 @@ PRIORITY = [
 
 
 def clean(x):
-    if not x:
-        return ""
-
     x = html.unescape(x)
-
     x = x.replace(r'\/', '/')
     x = x.replace(r'\u0026', '&')
     x = x.replace(r'\"', '"')
-
     return x.strip()
 
 
@@ -87,77 +82,49 @@ def normalize(name):
     )
 
 
+# --------------------------------
+# Get TvWatch logo.url
+# --------------------------------
+
 def find_logo(block):
-    """
-    TvWatch channel block থেকে logo খোঁজে।
 
-    বিভিন্ন সম্ভাব্য field:
-    logo
-    logo_url
-    image
-    image_url
-    thumbnail
-    thumbnail_url
-    poster
-    icon
-    """
+    # TvWatch structure:
+    #
+    # "logo":{
+    #     "channel":"AajTak.in",
+    #     ...
+    #     "url":"https://....png"
+    # }
 
-    logo_fields = [
-        "logo",
-        "logo_url",
-        "logoUrl",
-        "image",
-        "image_url",
-        "imageUrl",
-        "thumbnail",
-        "thumbnail_url",
-        "thumbnailUrl",
-        "poster",
-        "poster_url",
-        "posterUrl",
-        "icon",
-        "icon_url",
-        "iconUrl"
-    ]
+    match = re.search(
+        r'"logo"\s*:\s*\{.*?"url"\s*:\s*"([^"]+)"',
+        block,
+        re.I | re.S
+    )
 
-    for field in logo_fields:
+    if not match:
+        return ""
 
-        pattern = (
-            r'"'
-            + re.escape(field)
-            + r'"\s*:\s*"([^"]+)"'
-        )
+    logo = clean(
+        match.group(1)
+    )
 
-        match = re.search(
-            pattern,
-            block,
-            re.I
-        )
+    if not re.match(
+        r'https?://',
+        logo,
+        re.I
+    ):
+        return ""
 
-        if match:
-
-            logo = clean(
-                match.group(1)
-            )
-
-            if re.match(
-                r'https?://',
-                logo,
-                re.I
-            ):
-                return logo
-
-    return ""
+    return logo
 
 
 print("Getting country list...")
 
-home_response = session.get(
+home = session.get(
     BASE + "/",
     timeout=30
-)
-
-home = home_response.text
+).text
 
 countries = sorted(set(
     x.lower()
@@ -195,8 +162,8 @@ for number, country in enumerate(
 
             print(
                 f"[{number}/{len(countries)}] "
-                f"{country.upper()} "
-                f"HTTP {response.status_code}"
+                f"{country.upper()} HTTP "
+                f"{response.status_code}"
             )
 
             continue
@@ -214,9 +181,9 @@ for number, country in enumerate(
 
         for block in blocks:
 
-            # ---------------------------
+            # -----------------------------
             # Channel name
-            # ---------------------------
+            # -----------------------------
 
             name_match = re.search(
                 r'"name"\s*:\s*"([^"]+)"',
@@ -230,18 +197,20 @@ for number, country in enumerate(
                 name_match.group(1)
             )
 
-            # ---------------------------
+            # -----------------------------
             # Channel logo
-            # ---------------------------
+            # -----------------------------
 
-            logo = find_logo(block)
+            logo = find_logo(
+                block
+            )
 
             if logo:
                 logo_count += 1
 
-            # ---------------------------
+            # -----------------------------
             # Streams
-            # ---------------------------
+            # -----------------------------
 
             stream_match = re.search(
                 r'"streams"\s*:\s*\[(.*?)(?="channel"\s*:\s*\{|$)',
@@ -287,6 +256,7 @@ for number, country in enumerate(
                     "logo": logo,
 
                     "url": stream_url
+
                 })
 
                 count += 1
@@ -304,9 +274,9 @@ for number, country in enumerate(
         )
 
 
-# -------------------------------
+# --------------------------------
 # Remove duplicate URLs
-# -------------------------------
+# --------------------------------
 
 seen = set()
 unique = []
@@ -327,9 +297,9 @@ for item in all_channels:
 all_channels = unique
 
 
-# -------------------------------
+# --------------------------------
 # Bangladesh FIRST
-# -------------------------------
+# --------------------------------
 
 bd = [
     x for x in all_channels
@@ -337,15 +307,14 @@ bd = [
 ]
 
 
-# -------------------------------
+# --------------------------------
 # Indian Bangla PRIORITY
-# -------------------------------
+# --------------------------------
 
 india = [
     x for x in all_channels
     if x["country"] == "IN"
 ]
-
 
 priority_map = {
     normalize(name): position
@@ -361,7 +330,7 @@ def priority_index(item):
         item["name"]
     )
 
-    # Exact match
+    # Exact match first
     if name in priority_map:
         return priority_map[name]
 
@@ -383,9 +352,9 @@ india_priority = sorted(
 )
 
 
-# -------------------------------
+# --------------------------------
 # Other India channels
-# -------------------------------
+# --------------------------------
 
 priority_urls = set(
     x["url"]
@@ -398,26 +367,25 @@ india_other = [
 ]
 
 
-# -------------------------------
+# --------------------------------
 # Other countries
-# -------------------------------
+# --------------------------------
 
 others = [
     x for x in all_channels
-    if x["country"]
-    not in ("BD", "IN")
+    if x["country"] not in ("BD", "IN")
 ]
 
 
-# -------------------------------
+# --------------------------------
 # Final order
-# -------------------------------
+# --------------------------------
 
 final_channels = (
-    bd
-    + india_priority
-    + india_other
-    + others
+    bd +
+    india_priority +
+    india_other +
+    others
 )
 
 
@@ -434,9 +402,9 @@ print("LOGOS      :", logo_count)
 print("==============================")
 
 
-# -------------------------------
+# --------------------------------
 # Write M3U
-# -------------------------------
+# --------------------------------
 
 with open(
     OUT,
@@ -463,10 +431,6 @@ with open(
             "'"
         )
 
-        # --------------------------------
-        # M3U EXTINF
-        # --------------------------------
-
         if logo:
 
             file.write(
@@ -487,8 +451,7 @@ with open(
             )
 
         file.write(
-            item["url"]
-            + "\n"
+            item["url"] + "\n"
         )
 
 
