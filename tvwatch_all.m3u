@@ -11529,7 +11529,7 @@ https://cdn5.smart-tv-data.com/bluesky/bluesky-live/playlist.m3u8
 https://eu1.streams.gr:8081/centertv/index.m3u8
 #EXTINF:-1 tvg-country="GR" tvg-name="Channel 8" tvg-logo="https://www.channel8.gr/img/channel8.png",Channel 8
 https://gra1.crystalweb.net:1936/channel8/channel8/playlist.m3u8
-#EXTINF:-1 tvg-country="GR" tvg-name="Corfu Channel",Corfu Channel
+#EXTINF:-1 tvg-country="GR" tvg-name="Corfu Channel" tvg-logo="https://i.imgur.com/EFL1Tjg.png",Corfu Channel
 https://itv.streams.ovh:1936/corfuchannel/corfuchannel/playlist.m3u8
 #EXTINF:-1 tvg-country="GR" tvg-name="DELTA TV" tvg-logo="https://i.ibb.co/Nt79gnx/319386123-3050873715211949-6691293256713061450-n-1024x752.png",DELTA TV
 http://81.171.10.42:554/liveD/DStream.sdp/playlist.m3u8
@@ -11583,6 +11583,8 @@ https://kontralive.siliconweb.com/live/kontratv/playlist.m3u8
 https://eu1.streams.gr:8081/kostv/index.m3u8
 #EXTINF:-1 tvg-country="GR" tvg-name="Kriti TV" tvg-logo="https://i.imgur.com/X7jKwYl.png",Kriti TV
 https://cretetvlive.siliconweb.com/cretetv/liveabr/playlist.m3u8
+#EXTINF:-1 tvg-country="GR" tvg-name="Lepanto TV" tvg-logo="https://static-media.streema.com/media/cache/52/5e/525e3ae49d881cb702f2d4156b3c14a3.jpg",Lepanto TV
+https://fr.crystalweb.net:1936/lepantotv/lepantotv/playlist.m3u8
 #EXTINF:-1 tvg-country="GR" tvg-name="Mesogeios TV" tvg-logo="https://i.imgur.com/KX5olay.png",Mesogeios TV
 https://rtmp.win:3793/live/mesogeiostvlive.m3u8
 #EXTINF:-1 tvg-country="GR" tvg-name="Messatida TV" tvg-logo="https://i.imgur.com/WEYrIrC.png",Messatida TV
@@ -17124,8 +17126,6 @@ https://online.godstands.tv:5443/WebRTCApp/streams/EnglishStreaming.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="God Stands TV" tvg-logo="https://i.imgur.com/EO6cYUI.png",God Stands TV
 https://online.godstands.tv:5443/WebRTCApp/streams/HindiStreaming.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="God Stands TV" tvg-logo="https://i.imgur.com/EO6cYUI.png",God Stands TV
-https://online.godstands.tv:5443/WebRTCApp/streams/mainlive.m3u8
-#EXTINF:-1 tvg-country="PK" tvg-name="God Stands TV" tvg-logo="https://i.imgur.com/EO6cYUI.png",God Stands TV
 https://online.godstands.tv:5443/WebRTCApp/streams/PunjabiStreaming.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="God Stands TV" tvg-logo="https://i.imgur.com/EO6cYUI.png",God Stands TV
 https://online.godstands.tv:5443/WebRTCApp/streams/Tagalog.m3u8
@@ -17213,6 +17213,10 @@ http://103.250.28.74:8000/play/a04j/index.m3u8
 http://103.250.28.74:8000/play/a046/index.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="One Golf" tvg-logo="https://i.imgur.com/7JhaEW5.png",One Golf
 http://162.250.201.58:6211/pk/ONEGOLF/index.m3u8
+#EXTINF:-1 tvg-country="PK" tvg-name="Paighan TV" tvg-logo="https://i.imgur.com/zokC3gO.png",Paighan TV
+http://116.90.120.151:8000/play/a00h/index.m3u8
+#EXTINF:-1 tvg-country="PK" tvg-name="Paighan TV" tvg-logo="https://i.imgur.com/zokC3gO.png",Paighan TV
+https://cdn4.mjunoon.tv:8087/streamtest/107M/chunks.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="Pashto 1" tvg-logo="https://i.imgur.com/tUsLDRe.png",Pashto 1
 http://103.250.28.74:8000/play/a00t/index.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="PK Sports" tvg-logo="https://i.imgur.com/qtbSnrY.png",PK Sports
@@ -17227,9 +17231,9 @@ https://livecdn.live247stream.com/praise/tv/playlist.m3u8
 https://pixelsmedia.live/livepraisetv/index.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="PTV News" tvg-logo="https://i.imgur.com/Fpn8VU7.png",PTV News
 http://103.250.28.74:8000/play/a017/index.m3u8
-#EXTINF:-1 tvg-country="PK" tvg-name="PTV News" tvg-logo="https://i.imgur.com/Fpn8VU7.png",PTV News
+#EXTINF:-1 tvg-country="PK" tvg-name="PTV Sports" tvg-logo="https://i.imgur.com/CPm6GHA.png",PTV Sports
 http://103.250.28.74:8000/play/a019/index.m3u8
-#EXTINF:-1 tvg-country="PK" tvg-name="PTV News" tvg-logo="https://i.imgur.com/Fpn8VU7.png",PTV News
+#EXTINF:-1 tvg-country="PK" tvg-name="PTV Sports" tvg-logo="https://i.imgur.com/CPm6GHA.png",PTV Sports
 https://tvsen7.aynascope.net/Sports1/index.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="Public News" tvg-logo="https://i.imgur.com/q3ij8wO.png",Public News
 http://103.250.28.74:8000/play/a04g/index.m3u8
@@ -17237,10 +17241,12 @@ http://103.250.28.74:8000/play/a04g/index.m3u8
 http://103.250.28.74:8000/play/a03e/index.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="Raavi TV" tvg-logo="https://i.imgur.com/Sdvg5h2.png",Raavi TV
 http://116.90.120.149:8000/play/a01f/index.m3u8
-#EXTINF:-1 tvg-country="PK" tvg-name="Rohi" tvg-logo="https://i.imgur.com/zC8hXi4.png",Rohi
+#EXTINF:-1 tvg-country="PK" tvg-name="Rohi",Rohi
 http://103.250.28.74:8000/play/a00d/index.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="Roze News" tvg-logo="https://i.imgur.com/TedWqfL.png",Roze News
 http://103.250.28.74:8000/play/a01k/index.m3u8
+#EXTINF:-1 tvg-country="PK" tvg-name="SAB TV" tvg-logo="https://i.imgur.com/hC7Sidr.png",SAB TV
+https://ml-pull-dvc-myco.io:2096/SAB_ENTERTAINMENT/tracks-v1a1/mono.ts.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="Samaa TV" tvg-logo="https://i.imgur.com/r3U4A1P.png",Samaa TV
 http://103.250.28.74:8000/play/a022/index.m3u8
 #EXTINF:-1 tvg-country="PK" tvg-name="Samaa TV" tvg-logo="https://i.imgur.com/r3U4A1P.png",Samaa TV
