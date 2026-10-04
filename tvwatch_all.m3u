@@ -22717,9 +22717,9 @@ https://alpha.tv.online.tm/legacyhls/ch001.m3u8
 https://alpha.tv.online.tm/hls/ch000.m3u8
 #EXTINF:-1 tvg-country="TM" tvg-name="Arkadag TV" tvg-logo="https://i.imgur.com/JdEb4Ug.png",Arkadag TV
 https://alpha.tv.online.tm/legacyhls/ch000.m3u8
-#EXTINF:-1 tvg-country="TM" tvg-name="Asgabat" tvg-logo="https://i.imgur.com/EzjR1vo.png",Asgabat
+#EXTINF:-1 tvg-country="TM" tvg-name="Asgabat" tvg-logo="https://i.imgur.co",Asgabat
 https://alpha.tv.online.tm/hls/ch006.m3u8
-#EXTINF:-1 tvg-country="TM" tvg-name="Asgabat" tvg-logo="https://i.imgur.com/EzjR1vo.png",Asgabat
+#EXTINF:-1 tvg-country="TM" tvg-name="Asgabat" tvg-logo="https://i.imgur.co",Asgabat
 https://alpha.tv.online.tm/legacyhls/ch006.m3u8
 #EXTINF:-1 tvg-country="TM" tvg-name="Miras" tvg-logo="https://i.imgur.com/pWbJzr9.png",Miras
 https://alpha.tv.online.tm/hls/ch003.m3u8
