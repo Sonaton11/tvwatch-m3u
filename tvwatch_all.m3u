@@ -9437,8 +9437,6 @@ https://cdn.live.easybroadcast.io/abr_corp/66_al24_u4yga6h/corp/66_al24_u4yga6h_
 http://mkstream.servehttp.com:1940/AmouYazid/ay1/playlist.m3u8
 #EXTINF:-1 tvg-country="DZ" tvg-name="CNA" tvg-logo="https://i.imgur.com/Ki3ySUE.png",CNA
 https://live.creacast.com/cna/stream/playlist.m3u8
-#EXTINF:-1 tvg-country="DZ" tvg-name="CNA" tvg-logo="https://i.imgur.com/Ki3ySUE.png",CNA
-https://live.creacast.com/cna/smil:cna.smil/playlist.m3u8
 #EXTINF:-1 tvg-country="DZ" tvg-name="El-Heddaf TV" tvg-logo="https://i.imgur.com/cDkIDIA.png",El-Heddaf TV
 https://live.elheddaftv.com:8081/elheddaftv/index.m3u8
 #EXTINF:-1 tvg-country="DZ" tvg-name="Elwatania TV" tvg-logo="https://i.imgur.com/NKR8WFq.png",Elwatania TV
@@ -13859,7 +13857,7 @@ http://176.126.166.43:1935/live/312musik/playlist.m3u8
 https://st2.mediabay.tv/KG_KTRK-Ala-too/playlist.m3u8
 #EXTINF:-1 tvg-country="KG" tvg-name="Bilim Ilim" tvg-logo="https://i.ibb.co/qswtSWm/428598841-309456895457301-6206911287895397651-n-1.png",Bilim Ilim
 http://gohoski.fvds.ru:3000/mediabay/611/index.m3u8
-#EXTINF:-1 tvg-country="KG" tvg-name="ElTR" tvg-logo="https://i.ibb.co/r6czQwQ/365049798-774721644658455-5702658175909463406-n-2",ElTR
+#EXTINF:-1 tvg-country="KG" tvg-name="ElTR" tvg-logo="https://i.ibb.co/r6czQwQ/365049798-774721644658455-5702658175909463406-n-2.png",ElTR
 http://gohoski.fvds.ru:3000/mediabay/162/index.m3u8
 #EXTINF:-1 tvg-country="KG" tvg-name="Manas TV" tvg-logo="https://i.ibb.co/2Kvcj5Q/manas.jpg",Manas TV
 http://120.70.60.179:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=0&authid=0
@@ -13873,7 +13871,7 @@ http://gohoski.fvds.ru:3000/mediabay/601/playlist.m3u8
 http://gohoski.fvds.ru:3000/mediabay/697/playlist.m3u8
 #EXTINF:-1 tvg-country="KG" tvg-name="Sport" tvg-logo="https://i.imgur.com/ORCu0w0.png",Sport
 https://st2.mediabay.tv/KG_KTRK-Sport/index.m3u8
-#EXTINF:-1 tvg-country="KG" tvg-name="TV1.KG" tvg-logo="https://i.imgur.com/Mti9t9C.pn",TV1.KG
+#EXTINF:-1 tvg-country="KG" tvg-name="TV1.KG" tvg-logo="https://i.imgur.com/Mti9t9C.png",TV1.KG
 http://212.2.225.30:1935/live/site.stream/playlist.m3u8
 #EXTINF:-1 tvg-country="KG" tvg-name="TV15" tvg-logo="https://i.ibb.co/1byxRtp/tv15.png",TV15
 http://gohoski.fvds.ru:3000/mediabay/655/playlist.m3u8
