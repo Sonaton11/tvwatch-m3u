@@ -22321,8 +22321,6 @@ http://usa.login.in.th:1935/ch8/ch8/playlist.m3u8
 https://prsmedia-mykojh.cdn.byteark.com/fleetstream/live/720p/index.m3u8
 #EXTINF:-1 tvg-country="TH" tvg-name="Channel 8" tvg-logo="https://i.imgur.com/P3c5jAu.png",Channel 8
 https://lb1-live-mv.v2h-cdn.com/hls/ffbe/jvcxf/jvcxf.m3u8
-#EXTINF:-1 tvg-country="TH" tvg-name="Channel 8" tvg-logo="https://i.imgur.com/P3c5jAu.png",Channel 8
-https://live-us1.thaimomo.com/live-as/cheight-3/playlist.m3u8
 #EXTINF:-1 tvg-country="TH" tvg-name="Charoen Cable 37 TV" tvg-logo="https://www.cabletv.co.th/wp-content/uploads/2023/01/Artboard-3.png",Charoen Cable 37 TV
 http://www5.cabletv.co.th/StreamToCTV/cablechannel/playlist.m3u8
 #EXTINF:-1 tvg-country="TH" tvg-name="Cool Channel" tvg-logo="https://i.imgur.com/MU4E0A7.png",Cool Channel
@@ -22382,7 +22380,7 @@ http://49.0.87.24:1936/HDDragon/Dragon/playlist.m3u8
 #EXTINF:-1 tvg-country="TH" tvg-name="Maya Channel" tvg-logo="https://i.imgur.com/UropueN.png",Maya Channel
 http://146.88.62.69:1935/Transcoder/มายาHD.stream_576p/playlist.m3u8
 #EXTINF:-1 tvg-country="TH" tvg-name="MCOT HD" tvg-logo="https://i.imgur.com/ejPxGmU.png",MCOT HD
-https://mcothd-streaming-edge-cdn.mcot.net/tencentmcot/smil:tencentmcot.smil/playlist.m
+https://mcothd-streaming-edge-cdn.mcot.net/tencentmcot/smil:tencentmcot.smil/playlist.m3u8
 #EXTINF:-1 tvg-country="TH" tvg-name="MCOT HD" tvg-logo="https://i.imgur.com/ejPxGmU.png",MCOT HD
 https://lb1-live-mv.v2h-cdn.com/hls/ffbb/gdhk/gdhk.m3u8
 #EXTINF:-1 tvg-country="TH" tvg-name="MCOT HD" tvg-logo="https://i.imgur.com/ejPxGmU.png",MCOT HD
@@ -22391,8 +22389,6 @@ https://live-us1.thaimomo.com/live-as/chmcothd-3/playlist.m3u8
 https://lb1-live-mv.v2h-cdn.com/hls/ffbc/ffolvgdhk/ffolvgdhk.m3u8
 #EXTINF:-1 tvg-country="TH" tvg-name="MONO 29" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d5/Mono_29_Logo.png",MONO 29
 https://live-us1.thaimomo.com/live-as/chmono29-2/playlist.m3u8
-#EXTINF:-1 tvg-country="TH" tvg-name="MONO 29" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d5/Mono_29_Logo.png",MONO 29
-https://udn-streamer1.cdn.3bbtv.com:8443/3bb/live/29/29.mpd
 #EXTINF:-1 tvg-country="TH" tvg-name="Nation TV" tvg-logo="https://i.imgur.com/h3TY38F.png",Nation TV
 https://live-us1.thaimomo.com/live-as/chNation-3/playlist.m3u8
 #EXTINF:-1 tvg-country="TH" tvg-name="Nation TV" tvg-logo="https://i.imgur.com/h3TY38F.png",Nation TV
