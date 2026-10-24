@@ -25,9 +25,9 @@ https://box.bbaria.net/DurontoTV/index.m3u8
 https://tplay.live/out/bangladesh/ekhontv.index.m3u8
 #EXTINF:-1 tvg-country="BD" tvg-name="Ekushey TV" tvg-logo="https://i.imgur.com/lRpkGHj.png",Ekushey TV
 https://ekusheyserver.com/etvlivesn.m3u8
-#EXTINF:-1 tvg-country="BD" tvg-name="Gazi TV" tvg-logo="https://i.imgur.com/2Lzhiq6.png",Gazi TV
+#EXTINF:-1 tvg-country="BD" tvg-name="Ekushey TV" tvg-logo="https://i.imgur.com/lRpkGHj.png",Ekushey TV
 http://tvn1.chowdhury-shaheb.com/gazitv/index.m3u8
-#EXTINF:-1 tvg-country="BD" tvg-name="Gazi TV" tvg-logo="https://i.imgur.com/2Lzhiq6.png",Gazi TV
+#EXTINF:-1 tvg-country="BD" tvg-name="Ekushey TV" tvg-logo="https://i.imgur.com/lRpkGHj.png",Ekushey TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/gazibdz.stream/live-orgin/gazibdz.stream/playlist.m3u8
 #EXTINF:-1 tvg-country="BD" tvg-name="Green TV" tvg-logo="https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",Green TV
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8
@@ -63,6 +63,8 @@ https://tvsen5.aynaott.com/RtvHD/index.m3u8
 http://tvn3.chowdhury-shaheb.com/rtv/index.m3u8
 #EXTINF:-1 tvg-country="BD" tvg-name="Rupashi Bangla TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Rupashi_Bangla.png",Rupashi Bangla TV
 https://app24.jagobd.com.bd/c3VydmVyX8RpbEU9Mi8xNy8yMFDEEHGcfRgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcEdsEfeDeKiNkVN3PTOmdFseWRtaW51aiPhnPTI2/ruposhibangla.stream/playlist.m3u8
+#EXTINF:-1 tvg-country="BD" tvg-name="T Sports" tvg-logo="https://i.imgur.com/2JzlorD.png",T Sports
+https://tvsen5.aynaott.com/TnMn5kZz8aLm/index.m3u8
 #EXTINF:-1 tvg-country="BD" tvg-name="Vokta TV" tvg-logo="https://i.imgur.com/szAGBCU.png",Vokta TV
 https://vokta.raytahost.com/live/voktatv/index.m3u8
 #EXTINF:-1 tvg-country="IN" tvg-name="Star Jalsha" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Star-Jalsha--2000-x-1125--Transparent.png",Star Jalsha
@@ -22867,6 +22869,8 @@ http://nmk.ioapk.com:5050/4gtv-live107/index.m3u8
 http://111.59.139.85:11888/tsfile/live/1222_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-country="TW" tvg-name="SET News" tvg-logo="https://i.imgur.com/EGVbAvJ.png",SET News
 http://seb.sason.top/sc/sllive_fhd.m3u8
+#EXTINF:-1 tvg-country="TW" tvg-name="SJTV" tvg-logo="https://i.imgur.com/PTsFn9B.png",SJTV
+http://111.59.139.85:11888/tsfile/live/1220_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-country="TW" tvg-name="Supreme Master TV" tvg-logo="https://i.imgur.com/kFMHayP.png",Supreme Master TV
 https://lbs-us1.suprememastertv.com/720p.m3u8
 #EXTINF:-1 tvg-country="TW" tvg-name="Taiwan Indigenous TV" tvg-logo="https://i.imgur.com/QqIdVqz.png",Taiwan Indigenous TV
